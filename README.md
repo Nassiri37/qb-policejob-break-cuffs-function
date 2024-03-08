@@ -1,8 +1,11 @@
 # qb-policejob-break-cuffs-function
 ```
 Currently supports ox_lib skillcheck / ps-ui / circleminigame by trclassic92
+
 Gives Cop/Player notifications when cuffs are broken
+
 Players in laststand/dead dont have the option to break cuffs
+
 After player beats Config.MaxCuffAttempts the next time they are cuffed they wont be shown a minigame and will be cuffed
 ```
 
