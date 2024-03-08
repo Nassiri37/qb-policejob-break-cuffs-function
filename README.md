@@ -20,7 +20,6 @@ RegisterNetEvent('police:client:GetCuffed', function(playerId, isSoftcuff, Attac
     local lastStand = QBCore.Functions.GetPlayerData().metadata["inlaststand"]
     local deadBozo = QBCore.Functions.GetPlayerData().metadata["isdead"]
     local ped = PlayerPedId()
-
     local function handleCuffNotificationAndType(type, message)
         isHandcuffed = true
         TriggerServerEvent("police:server:SetHandcuffStatus", type)
