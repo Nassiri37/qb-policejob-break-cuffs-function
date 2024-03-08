@@ -9,6 +9,7 @@ RegisterNetEvent('notifyCuffBreak', function(playerId)
 end)
 
 # In client/interactions.lua
+
 # Add
 to lines 3 and 4
 local cuffedtimes = 0
