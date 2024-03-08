@@ -10,14 +10,14 @@ end)
 
 # In client/interactions.lua
 
-# Add
+**Add**
 to lines 3 and 4
 local cuffedtimes = 0
 local maxattempts = 3
 
 **Search for and replace police:client:GetCuffed**
 
-RegisterNetEvent('police:client:GetCuffed', function(playerId, isSoftcuff, AttachEntity)
+```RegisterNetEvent('police:client:GetCuffed', function(playerId, isSoftcuff, AttachEntity)
     local lastStand = QBCore.Functions.GetPlayerData().metadata["inlaststand"]
     local deadBozo = QBCore.Functions.GetPlayerData().metadata["isdead"]
     local ped = PlayerPedId()
@@ -126,3 +126,4 @@ RegisterNetEvent('police:client:GetCuffed', function(playerId, isSoftcuff, Attac
         QBCore.Functions.Notify(Lang:t("success.uncuffed"), "success")
     end
 end)
+```
