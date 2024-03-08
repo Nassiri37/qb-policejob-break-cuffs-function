@@ -69,8 +69,8 @@ RegisterNetEvent('police:client:GetCuffed', function(playerId, isSoftcuff, Attac
 
     if not isHandcuffed then
         if Config.Minigame == "lib.skillcheck" then
-            local keys = {'W','A','S','D'}
-            local difficulty = {'easy','easy','easy'}
+            local keys = Config.Keys
+            local difficulty = Config.Difficulty
             cuffedtimes = cuffedtimes + 1
             if cuffedtimes <= maxattempts then
                 local success = lib.skillCheck(difficulty, keys)
@@ -92,8 +92,6 @@ RegisterNetEvent('police:client:GetCuffed', function(playerId, isSoftcuff, Attac
                 end
             end
         elseif Config.Minigame == "ps-ui" then
-            local circles = 3
-            local ms = 10        
             cuffedtimes = cuffedtimes + 1
             if cuffedtimes <= maxattempts then
                 exports['ps-ui']:Circle(function(success)   
@@ -113,14 +111,14 @@ RegisterNetEvent('police:client:GetCuffed', function(playerId, isSoftcuff, Attac
                         cuffType = isSoftcuff and handleCuffNotificationAndType(49, Lang:t("info.cuffed_walk")) or
                                                 handleCuffNotificationAndType(16, Lang:t("info.cuff"))
                     end
-                end, circles, ms)
+                end, Config.Circles, Config.ms)
             end
         elseif Config.Minigame == "circleminigame" then
-            local time = math.random(6, 10)
-            local circles = math.random(2, 5)
+            local time = Config.Time
+            local TRCircles = Config.TRCircles
             cuffedtimes = cuffedtimes + 1
             if cuffedtimes <= maxattempts then
-                exports['CircleMinigame']:StartLockPickCircle(circles, seconds, success)     
+                exports['CircleMinigame']:StartLockPickCircle(TRCircles, seconds, success)     
                     if success then
                         TriggerServerEvent("police:server:SetHandcuffStatus", false)
                         QBCore.Functions.Notify("You broke free, now run!")
