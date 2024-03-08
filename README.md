@@ -13,11 +13,11 @@ Adds handcuff prop onto players wrists
 
 # Add to Config.lua
 ``` 
-Config.Minigame = "circleminigame" -- "lib.skillcheck" or "ps-ui" or "circleminigame"
+Config.Minigame = "ox_lib" -- "ox_lib" skillcheck or "ps-ui" circle minigame or "circleminigame" by trclassic92
 Config.MaxCuffAttempts = 3 -- Or however many you want
 
 -- ox_lib skillcheck
-Config.Keys = {'W','A','S','D'}
+Config.Keys = {'W','A','S','D'} -- change to whatever keys or keep as is
 Config.Difficulty = {'easy','easy','easy'} -- easy, medium, hard // can add as many more as you want or less
 
 -- ps-ui
@@ -85,7 +85,7 @@ RegisterNetEvent('police:client:GetCuffed', function(playerId, isSoftcuff, Attac
     end
 
     if not isHandcuffed then
-        if Config.Minigame == "lib.skillcheck" then
+        if Config.Minigame == "ox_lib" then
             local keys = Config.Keys
             local difficulty = Config.Difficulty
             cuffedtimes = cuffedtimes + 1
