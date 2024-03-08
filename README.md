@@ -8,7 +8,7 @@ Players in laststand/dead dont have the option to break cuffs
 
 After player beats Config.MaxCuffAttempts the next time they are cuffed they wont be shown a minigame and will be cuffed
 
-Adds handcuff prop onto players
+Adds handcuff prop onto players wrists
 ```
 
 # Add to Config.lua
