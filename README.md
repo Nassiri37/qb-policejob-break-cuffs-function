@@ -1,7 +1,25 @@
 # qb-policejob-break-cuffs-function
+Currently supports ox_lib skillcheck / ps-ui / circleminigame by trclassic92
+Gives Cop/Player notifications when cuffs are broken
+Players in laststand/dead dont have the option to break cuffs
+After player beats Config.MaxCuffAttempts the next time they are cuffed they wont be shown a minigame and will be cuffed
 
 # Add to Config.lua
 Config.Minigame = "circleminigame" -- "lib.skillcheck" or "ps-ui" or "circleminigame"
+Config.MaxCuffAttempts = 3 -- Or however many you want
+
+-- ox_lib skillcheck
+Config.Keys = {'W','A','S','D'}
+Config.Difficulty = {'easy','easy','easy'} -- easy, medium, hard // can add as many more as you want or less
+
+-- ps-ui
+Config.Circles = 3 -- How many circles
+Config.ms = 10 -- How fast or slow it passes
+
+-- circleminigame by trclassic92
+Config.Time = math.random(6,10) -- // can be solid number or math random ex. Config.Time = 5
+Config.TRCircles = math.random(2, 5) -- // can be solid number or math random ex. Config.TRCircles = 5 
+
 
 # Add to server/main.lua
 RegisterNetEvent('notifyCuffBreak', function(playerId)
@@ -10,10 +28,11 @@ end)
 
 # In client/interactions.lua
 
-**Add**
-to lines 3 and 4
+**Add
+to lines 3 and 4**
 local cuffedtimes = 0
-local maxattempts = 3
+local maxattempts = Config.MaxCuffAttempts
+
 
 **Search for and replace police:client:GetCuffed**
 
