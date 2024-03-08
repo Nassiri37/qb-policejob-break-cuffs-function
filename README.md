@@ -16,15 +16,15 @@ Adds handcuff prop onto players wrists
 Config.Minigame = "ox_lib" -- "ox_lib" skillcheck or "ps-ui" circle minigame or "circleminigame" by trclassic92
 Config.MaxCuffAttempts = 3 -- Or however many you want
 
--- ox_lib skillcheck
+-- ox_lib skillcheck https://github.com/overextended/ox_lib
 Config.Keys = {'W','A','S','D'} -- change to whatever keys or keep as is
 Config.Difficulty = {'easy','easy','easy'} -- easy, medium, hard // can add as many more as you want or less
 
--- ps-ui
+-- ps-ui https://github.com/Project-Sloth/ps-ui
 Config.Circles = 3 -- How many circles
 Config.ms = 10 -- How fast or slow it passes
 
--- circleminigame by trclassic92
+-- circleminigame by trclassic92 https://github.com/trclassic92/CircleMinigame
 Config.Time = math.random(6,10) -- // can be solid number or math random ex. Config.Time = 5
 Config.TRCircles = math.random(2, 5) -- // can be solid number or math random ex. Config.TRCircles = 5 
 ```
