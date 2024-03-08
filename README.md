@@ -19,6 +19,7 @@ local maxattempts = 3
 
 
 
+
 RegisterNetEvent('police:client:GetCuffed', function(playerId, isSoftcuff, AttachEntity)
 
     local lastStand = QBCore.Functions.GetPlayerData().metadata["inlaststand"]
