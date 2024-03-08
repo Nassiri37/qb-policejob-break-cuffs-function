@@ -5,6 +5,7 @@ Players in laststand/dead dont have the option to break cuffs
 After player beats Config.MaxCuffAttempts the next time they are cuffed they wont be shown a minigame and will be cuffed
 
 # Add to Config.lua
+``` 
 Config.Minigame = "circleminigame" -- "lib.skillcheck" or "ps-ui" or "circleminigame"
 Config.MaxCuffAttempts = 3 -- Or however many you want
 
@@ -19,12 +20,15 @@ Config.ms = 10 -- How fast or slow it passes
 -- circleminigame by trclassic92
 Config.Time = math.random(6,10) -- // can be solid number or math random ex. Config.Time = 5
 Config.TRCircles = math.random(2, 5) -- // can be solid number or math random ex. Config.TRCircles = 5 
+```
 
 
 # Add to server/main.lua
+```
 RegisterNetEvent('notifyCuffBreak', function(playerId)
     TriggerClientEvent('QBCore:Notify', playerId, "Seems this person broke out of their handcuffs.", "error", 3000)
 end)
+```
 
 # In client/interactions.lua
 
