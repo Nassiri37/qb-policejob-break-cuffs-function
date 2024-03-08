@@ -34,9 +34,10 @@ end)
 
 **Add
 to lines 3 and 4**
+```
 local cuffedtimes = 0
 local maxattempts = Config.MaxCuffAttempts
-
+```
 
 **Search for and replace police:client:GetCuffed**
 
