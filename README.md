@@ -15,6 +15,7 @@ local cuffedtimes = 0
 local maxattempts = 3
 
 # Search for and replace police:client:GetCuffed
+
 RegisterNetEvent('police:client:GetCuffed', function(playerId, isSoftcuff, AttachEntity)
     local lastStand = QBCore.Functions.GetPlayerData().metadata["inlaststand"]
     local deadBozo = QBCore.Functions.GetPlayerData().metadata["isdead"]
