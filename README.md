@@ -1,6 +1,6 @@
 # qb-policejob-break-cuffs-function
 ```
-Currently supports ox_lib skillcheck / ps-ui / circleminigame by trclassic92
+Currently supports ox_lib skillcheck / ps-ui circle minigame/ circleminigame by trclassic92
 
 Gives Cop/Player notifications when cuffs are broken
 
